@@ -85,7 +85,7 @@ body {
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
     .logo-image {
-        height: 32px; /* Slightly smaller on mobile */
+        height: 25px; /* Slightly smaller on mobile */
     }
     .logo-text {
         font-size: 1.3rem;
