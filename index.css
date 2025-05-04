@@ -84,18 +84,13 @@ body {
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
     .logo-image {
-        height: 32px; /* Slightly smaller on mobile */
+        height: 30px; /* Slightly smaller on mobile */
     }
     .logo-text {
         font-size: 1rem;
     }
   }
-.logo {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--primary);
-    text-decoration: none;
-}
+
 
 .logo span {
     color: var(--secondary);
