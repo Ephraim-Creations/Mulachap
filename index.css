@@ -32,11 +32,12 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
 
 /* Header Styles */
 .header {
@@ -84,13 +85,18 @@ body {
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
     .logo-image {
-        height: 30px; /* Slightly smaller on mobile */
+        height: 32px; /* Slightly smaller on mobile */
     }
     .logo-text {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
   }
-
+.logo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
 
 .logo span {
     color: var(--secondary);
