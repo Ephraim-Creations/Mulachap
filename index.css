@@ -269,7 +269,7 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(47, 51, 54, 0.85), rgba(0, 13, 22, 0.9)), 
+    background: linear-gradient(rgba(47, 51, 54, 0.604), rgba(0, 13, 22, 0.661)), 
                 url('hero.jpg') no-repeat center center/cover;
     color: var(--white);
     display: flex;
