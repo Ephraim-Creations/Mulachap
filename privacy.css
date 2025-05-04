@@ -1,0 +1,119 @@
+/* Privacy Policy Page Specific Styles */
+.privacy-section {
+    padding: 100px 0 60px;
+    background-color: var(--background-alt);
+}
+
+.privacy-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--accent);
+}
+
+.privacy-header h1 {
+    font-size: 2.8rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.effective-date {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.last-updated {
+    font-size: 0.9rem;
+    color: var(--dark-text);
+    opacity: 0.7;
+}
+
+.privacy-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.privacy-group {
+    margin-bottom: 40px;
+    background-color: var(--white);
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.privacy-group h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.privacy-group h2 i {
+    color: var(--secondary);
+}
+
+.privacy-group p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.privacy-group ul {
+    margin: 15px 0 15px 20px;
+}
+
+.privacy-group li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.6;
+   list-style: none;
+}
+
+.privacy-group li:before {
+    content: "✓";
+    color: var(--accent);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.privacy-group address {
+    font-style: normal;
+    margin-top: 15px;
+}
+
+.privacy-group address strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--secondary);
+}
+
+/* Responsive Privacy Page */
+@media (max-width: 768px) {
+    .privacy-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .privacy-group {
+        padding: 20px;
+    }
+    
+    .privacy-group h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .privacy-section {
+        padding: 80px 0 40px;
+    }
+    
+    .privacy-group li {
+        padding-left: 20px;
+    }
+}
+
