@@ -596,6 +596,15 @@ body {
     background: #005B96;
     
 }
+/* SUCCESS MESSAGE */
+.success-message {
+    color: rgb(0, 183, 15);
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    display: none;
+    animation: fadeIn 1.2s ease-in-out forwards;
+  }
 
 /* ANIMATIONS */
 @keyframes fadeIn {
