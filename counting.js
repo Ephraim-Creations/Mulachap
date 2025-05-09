@@ -3,23 +3,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const milestones = [
         { 
             element: '.milestone:nth-child(1) .number', 
-            target: 8,
+            target: 10,
             prefix: '', 
             suffix: '',
             duration: 2000 // 2 seconds per cycle
         },
         { 
             element: '.milestone:nth-child(2) .number', 
-            target: 5000,
+            target: 800,
             prefix: '', 
             suffix: '+',
             duration: 2000
         },
         { 
             element: '.milestone:nth-child(3) .number', 
-            target: 500,
+            target: 100 ,
             prefix: 'Ksh ', 
-            suffix: 'M',
+            suffix: 'M+',
             duration: 2000
         }
     ];
