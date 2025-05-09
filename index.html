@@ -206,19 +206,27 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-form">
+
+
+                <!--Contact/booking-->
+                <div class="contact-form"  id="contact">
                     <h3>Book Your Consultation</h3>
-                    <form id="validatedBookingForm">
+                    <form id="validatedBookingForm" method="POST">         
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="index.html">       
+                        <input type="hidden" name="_subject" value="New Consultation Booking">
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_template" value="table">
+                        
                         <!-- Personal Information -->
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="fullName">Full Name</label>
-                                <input type="text" id="fullName" placeholder="Name Here..." required>
+                                <input type="text" id="fullName" name="fullName" placeholder="Name Here..." required>
                             </div>
                             <div class="form-group">
                                 <label for="phoneNumber">Phone Number</label>
-                                <input type="tel" id="phoneNumber" placeholder="07XX XXX XXX" required>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="07XX XXX XXX" required>
                             </div>
                         </div>
                 
@@ -226,62 +234,61 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="appointmentDate">Preferred Date</label>
-                                <input type="date" id="appointmentDate" required>
+                                <input type="date" id="appointmentDate" name="appointmentDate" required>
                                 <small class="hint">Available weekdays only (Mon-Fri)</small>
                                 <div class="error-message" id="dateError"></div>
                             </div>
                             <div class="form-group">
                                 <label for="appointmentTime">Preferred Time</label>
-                                <input type="time" id="appointmentTime" min="09:00" max="17:00" required>
+                                <input type="time" id="appointmentTime" name="appointmentTime" min="09:00" max="17:00" required>
                                 <small class="hint">9:00 AM - 5:00 PM</small>
                                 <div class="error-message" id="timeError"></div>
                             </div>
                         </div>
                 
                         <!-- Service Selection -->
-                    <div class="form-row">
-                        <div class="form-group">                  
-                         <label for="serviceType">Service Needed</label>
-                            <select id="serviceType" required>
-                                <option value="">-- Select service --</option>
-                                <option>Vehicle Financing</option>
-                                <option>Asset-Backed Loans</option>
-                                <option>Business Financing</option>
-                                <option>Contract Financing</option>
-                                <option>Salary-Advance Solutions</option>
-                                <option>Property Financing</option>
-                            </select>
+                        <div class="form-row">
+                            <div class="form-group">                  
+                                <label for="serviceType">Service Needed</label>
+                                <select id="serviceType" name="serviceType" required>
+                                    <option value="">-- Select service --</option>
+                                    <option>Vehicle Financing</option>
+                                    <option>Asset-Backed Loans</option>
+                                    <option>Business Financing</option>
+                                    <option>Contract Financing</option>
+                                    <option>Salary-Advance Solutions</option>
+                                    <option>Property Financing</option>
+                                </select>
+                            </div>
+                            <!-- Contact Method -->
+                            <div class="form-group">
+                                <label for="contactMethod">Consultancy Method</label>
+                                <select id="contactMethod" name="contactMethod" required>
+                                    <option value="">-- Select method --</option>
+                                    <option>Phone Call</option>
+                                    <option>WhatsApp Call(voice)</option>
+                                    <option>Video Meeting (Zoom/Google meet)</option>
+                                    <option>In-Person (Nairobi Office)</option>
+                                </select>
+                            </div>
                         </div>
-                        <!-- Contact Method -->
-                        <div class="form-group">
-                            <label for="contactMethod">Consultancy Method</label>
-                            <select id="contactMethod" required>
-                                <option value="">-- Select method --</option>
-                                <option>Phone Call</option>
-                                <option>WhatsApp Call(voice)</option>
-                                <option>Video Meeting (Zoom/Google meet)</option>
-                                <option>In-Person (Nairobi Office)</option>
-                            </select>
-                        </div>
-                    </div>
-
                 
                         <!-- Additional Info -->
                         <div class="form-group">
                             <label for="needsDescription"></label>
-                            <textarea id="needsDescription" placeholder="Briefly describe your needs This will help us Prepare in advance"></textarea>
+                            <textarea id="needsDescription" name="needsDescription" placeholder="Briefly describe your needs This will help us Prepare in advance"></textarea>
                         </div>
                 
                         <!-- Terms Agreement -->
                         <div class="form-group terms-check">
-                            <input type="checkbox" id="termsAgreement" required>
+                            <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
                             <label for="termsAgreement" class="terms-label">I agree to Mulachap Ventures' <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
                         </div>
                         
-                        <button type="submit" class="submit-button">
-                            <i class="fas fa-calendar-check"></i> Schedule Consultation
-                        </button>
-                    </form>
+                        <button type="submit" class="submit-button">Submit <i class="fas fa-paper-plane"></i></button>
+                      </form>
+                      <div id="successMessage" class="success-message" style="display: none;"></div>
+
                 </div>
             </div>
         </div>
