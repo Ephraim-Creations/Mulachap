@@ -86,3 +86,77 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+// FAQ Toggle Functionality
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle('active');
+        
+        // Close other open FAQs
+        document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== faqItem && item.classList.contains('active')) {
+                item.classList.remove('active');
+            }
+        });
+    });
+});
+
+//Contact Form script for the dates 
+document.addEventListener('DOMContentLoaded', function() {
+    const dateInput = document.getElementById('appointmentDate');
+    const timeInput = document.getElementById('appointmentTime');
+    const dateError = document.getElementById('dateError');
+    const timeError = document.getElementById('timeError');
+    const form = document.getElementById('validatedBookingForm');
+
+    // Set minimum date to today
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+    const yyyy = today.getFullYear();
+    const minDate = yyyy + '-' + mm + '-' + dd;
+    
+    dateInput.min = minDate;
+    dateInput.value = minDate; // Default to today
+
+    // Validate date selection
+    dateInput.addEventListener('change', function() {
+        const selectedDate = new Date(this.value);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Compare dates only
+        
+        if (selectedDate < today) {
+            dateError.textContent = "Please select a future date";
+            this.setCustomValidity("Invalid date");
+        } else if (selectedDate.getDay() === 0 || selectedDate.getDay() === 6) {
+            dateError.textContent = "Weekend dates not available";
+            this.setCustomValidity("Weekend date");
+        } else {
+            dateError.textContent = "";
+            this.setCustomValidity("");
+        }
+    });
+
+    // Validate time selection
+    timeInput.addEventListener('change', function() {
+        const selectedTime = this.value;
+        const [hours, minutes] = selectedTime.split(':').map(Number);
+        
+        if (hours < 9 || hours >= 17) {
+            timeError.textContent = "Please select time during business hours";
+            this.setCustomValidity("Invalid time");
+        } else {
+            timeError.textContent = "";
+            this.setCustomValidity("");
+        }
+    });
+
+    // Form submission
+    form.addEventListener('submit', function(e) {
+        if (!dateInput.validity.valid || !timeInput.validity.valid) {
+            e.preventDefault();
+            // You could add more prominent error display here
+        }
+    });
+});
