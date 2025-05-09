@@ -160,3 +160,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+//Sucess message
+document.getElementById("validatedBookingForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Stop default redirect behavior
+  
+    const form = this;
+    const formData = new FormData(form);
+    const successMsg = document.getElementById("successMessage");
+  
+    // Manually post to FormSubmit
+    fetch("https://formsubmit.co/mulachapventures@gmail.com", {
+      method: "POST",
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        successMsg.style.display = "block";
+        successMsg.textContent = "Thank you for your consultation request. We'll contact you shortly to confirm your appointment.";
+        form.reset();
+  
+        // Optional: redirect after delay
+        setTimeout(() => {
+          window.location.href = "index.html"; // or your thank-you page
+        }, 5000);
+      } else {
+        successMsg.style.display = "block";
+        successMsg.style.color = "red";
+        successMsg.textContent = "Oops! Something went wrong. Please try again.";
+      }
+    }).catch(error => {
+      console.error("Submission error:", error);
+    });
+  });
+  
+  
