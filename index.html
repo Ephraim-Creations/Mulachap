@@ -7,6 +7,8 @@
     <meta name="description" content="Mulachap Ventures provides expert financial consulting with tailored solutions to help businesses and individuals secure better financing terms">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel = "icon" href = "favicon.png"> 
+
 </head>
 <body>
     <!-- Header with Navigation -->
@@ -25,8 +27,6 @@
                     <li><a href="index.html#services">Services</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                     <li><a href="about.html#FAQ">FAQs</a></li>
-                    <li><a href="terms.html" class="active">Terms of Services</a></li>
-                    <li><a href="Privacy.html" class="active">Privacy policy</a></li>
                 </ul>
             </nav>
             
@@ -50,8 +50,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="terms.html" class="active">Terms of Services</a></li>
-                <li><a href="Privacy.html" class="active">Privacy policy</a></li>
+
             </ul>
         </nav>
     </div>
@@ -209,7 +208,7 @@
 
 
                 <!--Contact/booking-->
-                <div class="contact-form" >
+                <div class="contact-form"  id="contact">
                     <h3>Book Your Consultation</h3>
                     <form id="validatedBookingForm" method="POST">         
                         <input type="hidden" name="_captcha" value="false">
@@ -282,7 +281,7 @@
                         <!-- Terms Agreement -->
                         <div class="form-group terms-check">
                             <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
-                            <label for="termsAgreement" class="terms-label">I agree to Mulachap Ventures' <a href="terms.html">Terms of Service</a> and <a href="Privacy.html">Privacy Policy</a></label>
+                            <label for="termsAgreement" class="terms-label">I agree to Mulachap Ventures' <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
                         </div>
                         
                         <button type="submit" class="submit-button">Submit <i class="fas fa-paper-plane"></i></button>
