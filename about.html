@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel = "icon" href = "favicon.png"> 
+
 </head>
 <body>
     <!-- Header with Navigation -->
@@ -26,8 +28,7 @@
                     <li><a href="index.html#services">Services</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                     <li><a href="about.html#FAQ">FAQs</a></li>
-                    <li><a href="terms.html" class="active">Terms of Services</a></li>
-                    <li><a href="Privacy.html" class="active">Privacy policy</a></li>
+
                 </ul>
             </nav>
             
@@ -39,7 +40,7 @@
             </button>
         </div>
     </header>
-    
+        
     <!-- Mobile Navigation Menu (Overlay) -->
     <div class="mobile-nav-overlay">
         <nav class="mobile-nav">
@@ -51,14 +52,13 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
-                <li><a href="terms.html" class="active">Terms of Services</a></li>
-                <li><a href="Privacy.html" class="active">Privacy policy</a></li>
+
             </ul>
         </nav>
     </div>
     
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero-abt">
         <div class="container">
             <h1>Our Financial Consulting Expertise</h1>
             <p>Trusted guidance to help you secure better financial solutions across Kenya</p>
@@ -155,11 +155,11 @@
                 <div class="founder-content">
                     <div class="founder-image">
                         <img src="founder.jpeg" alt="Immaculate Wangari Kimondo - Founder" loading="lazy">
-                        <div class="socials-links">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                        </div>
+                    <div class="socials-links">
+                        <a href="https://www.facebook.com/profile.php?id=61567644402445#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@_imma80" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/254702853098" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                     </div>
                     <div class="founder-bio">
                         <h3>Immaculate Wangari Kimondo</h3>
@@ -197,7 +197,7 @@
                         <p>We're excited to continue our journey of empowering Kenyans through expert financial consulting.</p>
                     </div>
                     <div class="future-image">
-                        <img src="future.jpg" alt="Mulachap Ventures future vision" loading="lazy">
+                        <img src="future.jpg" alt="Mulachap Ventures" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -215,51 +215,91 @@
         <div class="faq-container">
             <div class="faq-item">
                 <button class="faq-question">
-                    <span>What types of financial consulting do you offer?</span>
+                    <span>What types of loans do you consult for?</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="faq-answer">
-                    <p>We provide comprehensive financial consulting including loan advisory, business financing strategies, investment planning, and financial empowerment programs tailored to both individuals and businesses.</p>
+                    <p>
+                        We provide consultation for the following loan types:
+                    </p>
+                    <ul>
+                      <li>Logbook Loans</li>
+                      <li>Loan Buy-Offs</li>
+                      <li>Import Financing</li>
+                      <li>Asset Financing</li>
+                      <li>LPO (Local Purchase Order) Financing</li>
+                    </ul>
+                </div>
+            </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How much can I borrow?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        The loan amount depends on the type of loan, your income level, credit history, and collateral provided.
+                    </p>
                 </div>
             </div>
             
             <div class="faq-item">
                 <button class="faq-question">
-                    <span>How long does the consultation process take?</span>
+                    <span>What are the loan requirements?</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="faq-answer">
-                    <p>Our initial consultation typically takes about 1-2 hours, depending on your needs. Follow-up sessions may be scheduled as needed to develop and implement your financial strategy.</p>
+                    <p>To apply, you will need the following documents:</p>
+                <ul>
+                    <li>6 months bank statements</li>
+                    <li>12 months M-Pesa statement</li>
+                    <li>Copy of KRA PIN</li>
+                    <li>Copy of National ID</li>
+                    <li>Recent passport photo</li>
+                </ul>
+                </div>
+            </div>
+
+                        <div class="faq-item">
+                <button class="faq-question">
+                    <span>Who is eligible to apply for a loan?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>To be eligible, you must:</p>
+                <ul>
+                    <li>Be at least 18 years old</li>
+                    <li>Possess a valid national ID</li>
+                    <li>Have a steady income</li>
+                    <li>Meet our credit assessment criteria</li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What collateral is required to apply?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Logbook Loans: A vehicle logbook is required as collateral. <br>
+                        Check-Off Loans: Payslips serve as proof of income and collateral
+                    </p>
                 </div>
             </div>
             
             <div class="faq-item">
                 <button class="faq-question">
-                    <span>What makes Mulachap Ventures different?</span>
+                    <span>How long does loan approval take?</span>
                     <i class="fas fa-chevron-down"></i>
                 </button>
                 <div class="faq-answer">
-                    <p>With 10 years of experience, we focus on personalized solutions rather than one-size-fits-all approaches. Our founder's expertise and our commitment to integrity ensure you get transparent, client-focused advice.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>Do you charge for initial consultations?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>We offer a free 30-minute discovery call to understand your needs. For comprehensive consultations, we have reasonable fees that we discuss transparently upfront.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>How can I schedule a consultation?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>You can call us at 0741 699953, WhatsApp 0702 853098, or use the contact form on our website to schedule an appointment at your convenience.</p>
+                    <p>
+                        Loan approval typically takes between 6 to 24 hours after submission of all required documents.
+                    </p>
                 </div>
             </div>
         </div>
@@ -277,9 +317,9 @@
                     <a href="#" class="logo">Mulachap <span>Ventures</span></a>
                     <p>Your trusted financial consulting partner with 10 years of experience helping clients nationwide.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://wa.me/254702853098"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61567644402445#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@_imma80" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/254702853098" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
